@@ -1,154 +1,1600 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEBULA — L'Identité Olfactive de Prestige</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --noir: #0a0a0b;
+    --noir-2: #111114;
+    --noir-3: #1a1a1e;
+    --blanc: #f7f4ef;
+    --blanc-2: #e8e3da;
+    --or: #c9a96e;
+    --or-2: #a87c42;
+    --or-pale: rgba(201,169,110,0.12);
+    --gris: #6b6b72;
+    --gris-2: #3a3a40;
+  }
 
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-NEB·ULA
-OBTENIR MON DIFFUSEUR
-IDENTITÉ OLFACTIVE · TECHNOLOGIE DE PRESTIGE
-L'Identité d'un Palace. Partout.
-Votre diffuseur nébuliseur haute technologie offert avec votre abonnement aux fragrances de Grasse. Une seule décision. Une présence olfactive permanente.
-RECEVOIR MON DIFFUSEUR OFFERT
-DÉCOUVRIR LA TECHNOLOGIE
-0°
-NÉBULISATION À FROID
-100%
-ESSENCES PURES CERTIFIÉES
-∞
-GARANTIE SOUS ABONNEMENT
-LE PROBLÈME
-L'odeur qui vous coûte des clients
-On ne ferme pas un deal dans un bureau qui sent l'humidité. On ne soigne pas l'image d'une marque dans un hall d'entrée qui sent le désinfectant. L'olfactif est la dimension oubliée du prestige — la plus mémorisée.
-🏥
-Cabinet médical ou vétérinaire
-L'odeur antiseptique ou animale crée une anxiété immédiate. Elle signale un environnement subit, pas choisi. Vos clients le ressentent avant de voir quoi que ce soit.
-🏢
-Hall d'entrée de bureau
-Un hall sans identité olfactive est un hall sans personnalité. Les Palaces et les grandes maisons de luxe l'ont compris depuis des décennies. Votre espace mérite le même traitement.
-🚗
-Intérieur automobile de luxe
-Vous conduisez une Tesla, une BMW, une Porsche — et l'odeur vient d'un gadget à 5€. Ce n'est pas cohérent avec le reste de votre univers. Vous le savez.
-"Les études neuromarketing confirment ce que l'instinct sait déjà : une odeur de qualité augmente la perception de valeur d'un espace de 27%. Une mauvaise odeur annule l'effet de n'importe quel investissement visuel."
-— RÉSULTATS D'ÉTUDES EN MARKETING SENSORIEL, 2023
+  html { scroll-behavior: smooth; }
 
-La question n'est pas si vous devez soigner votre identité olfactive. La question est de le faire avec la technologie et les matières qui sont à la hauteur de votre image.
-LA TECHNOLOGIE
-Pas un humidificateur. Une nébulisation moléculaire.
-Le NEBULA est conçu selon le principe Apple : aucun bouton superflu, un seul matériau, une seule LED. L'élégance vient de ce qu'on n'a pas mis.
-01
-Nano-Nébulisation à Froid
-Contrairement aux diffuseurs à chaleur qui altèrent les molécules aromatiques, notre système fractionne les essences en particules de 1 à 5 microns sans aucune modification thermique. La fragrance que vous diffusez est identique à celle du flacon.
-02
-Aluminium anodisé. Design minimaliste.
-Un corps monolithique en aluminium anodisé noir mat. Aucun joint visible. Aucun bouton. Une seule LED blanche discrète indique l'état de fonctionnement. Silencieux en dessous de 28 décibels.
-03
-Couverture jusqu'à 150 m²
-Une cartouche couvre jusqu'à 150 m² en diffusion continue. Programmation par tranche horaire via l'application mobile. Compatible domotique Zigbee.
-04
-Cartouches propriétaires à chargement magnétique
-Connexion magnétique, remplacement en 3 secondes, zéro déversement. Le système cartouche est le cœur du dispositif de qualité certifiée.
-CERTIFICATION
-Essences de Grasse.
-Nos formules sont développées avec des maisons de composition parfumée indépendantes utilisant les matières premières naturelles de Grasse — capitale mondiale de la parfumerie. Notes de tête, de cœur, de fond : une architecture olfactive complète.
-EXPÉRIENCE
-Issu de la parfumerie de luxe.
-Notre expertise est née de la production de compositions inspirées des grandes maisons. Nous connaissons les accords qui définissent le prestige — et nous les rendons accessibles sans compromis sur la qualité de la matière.
-◈
-INTELLIGENCE
-MOLÉCULAIRE
-CERTIFIÉE
-PURETÉ CERTIFIÉE
-L'Intelligence qui protège votre machine.
-Votre NEBULA n'est pas seulement un diffuseur. Il est équipé d'un système de capteurs moléculaires intégrés — une technologie qui garantit la qualité de ce que vous respirez.
+  body {
+    background: var(--noir);
+    color: var(--blanc);
+    font-family: 'Cormorant Garamond', serif;
+    overflow-x: hidden;
+    cursor: none;
+  }
 
-Capteurs de détection moléculaire
-Les capteurs identifient la composition chimique de la substance introduite en moins de 3 secondes. Seules les essences NEBULA certifiées sont reconnues. Toute autre substance — eau, huile essentielle non certifiée, diluant — est immédiatement détectée.
+  /* Custom cursor */
+  .cursor {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: var(--or);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
+  }
+  .cursor-ring {
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(201,169,110,0.4);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: all 0.18s ease;
+  }
 
-Protection du système de nébulisation
-L'introduction d'une substance non certifiée endommage irrémédiablement la membrane de nébulisation ultra-fine, conçue exclusivement pour nos formulations. Nos capteurs protègent cet élément de précision — et donc votre investissement.
+  /* Nav */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 28px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    mix-blend-mode: normal;
+    background: linear-gradient(to bottom, rgba(10,10,11,0.95) 0%, transparent 100%);
+  }
 
-Garantie à Vie sous abonnement actif
-Tant que votre abonnement est actif et que les essences certifiées NEBULA sont utilisées, votre machine est garantie à vie. Remplacement sous 72h en cas de dysfonctionnement. Aucune question posée.
-NOS OFFRES
-Un abonnement. Une machine offerte.
-Le diffuseur NEBULA est inclus dès votre premier abonnement. Pas de frais cachés. Pas de délai. Livraison offerte en 48h.
-TRIMESTRIEL — STARTUP
-€89
-/ TRIMESTRE · SOIT 29,67€/MOIS
-✦ Machine NEBULA One offerte
-	•	3 cartouches de fragrance prestige Accès à 12 signatures olfactives Application mobile incluse Support prioritaire 5j/7 Garantie 2 ans constructeur
-COMMENCER →
-LE PLUS CHOISI
-ANNUEL — SIGNATURE
-€249
-/ AN · SOIT 20,75€/MOIS
-✦ Machine NEBULA Pro offerte (valeur 390€)
-	•	12 cartouches prestige par an Accès à l'intégralité du catalogue (24 signatures) Changement de fragrance mensuel inclus Application mobile premium Hotline dédiée 7j/7 Garantie à Vie sous abonnement Livraison express prioritaire
-RECEVOIR MON NEBULA PRO →
-B2B — PALACE
-€490
-/ AN · MULTI-ESPACES
-✦ 3 machines NEBULA Pro offertes
-	•	36 cartouches par an répartissables Identité olfactive personnalisée sur mesure Facturation entreprise mensuelle Onboarding olfactif sur site inclus Account Manager dédié Garantie à Vie sur les 3 machines
-CONTACTER L'ÉQUIPE →
-NOTRE ADN
-Née de la parfumerie de luxe.
-Avant NEBULA, il y a des années d'immersion dans la chimie aromatique des grandes maisons. Une connaissance des accords qui définissent le prestige — acquise, pas copiée.
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 0.35em;
+    color: var(--blanc);
+  }
+  .logo span { color: var(--or); }
 
-Nos formulations s'inspirent des codes olfactifs des maisons les plus réputées — Dior, Chanel, Tom Ford — sans jamais reproduire leurs compositions. Nous créons des signatures propres, à partir des mêmes matières premières nobles. La différence ? Vous la sentez.
-NOTES DE TÊTE
-Bergamote · Citron de Sicile · Gingembre
-NOTES DE CŒUR
-Rose de Mai · Jasmin Sambac · Iris
-NOTES DE FOND
-Oud · Ambre gris · Bois de santal
-MATIÈRES PREMIÈRES
-Grasse · Calabre · Sri Lanka
-SIGNATURES EMBLÉMATIQUES
-Nos créations olfactives les plus appréciées, disponibles en cartouches dans votre abonnement.
-I
-Forêt Sombre
-Bois d'Argent revisité · Oud, patchouli, encens
-II
-Bureau 54
-Masculin absolu · Cuir, cèdre de l'Atlas, tabac blond
-III
-Carte Blanche
-Épuré absolu · Coton blanc, musc pur, bois flotté
-IV
-Palais Royal
-Signature palace · Rose, ambre, vanille de Madagascar
-V
-Intérieur Cuir
-Automobile de luxe · Cuir neuf, bois de santal, vétiver
-FAQ
-Vos questions.
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gris);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--or); }
 
-Une question non listée ? Notre équipe répond en moins de 2 heures en semaine.
-La machine est-elle vraiment offerte ?
-+
-Oui, sans condition cachée. Le NEBULA One (valeur 190€) est inclus dans l'abonnement Trimestriel, le NEBULA Pro (valeur 390€) dans l'abonnement Annuel Signature. La machine reste la propriété de NEBULA tant que l'abonnement est actif — ce qui nous engage à vous offrir un service irréprochable à tout moment.
-Puis-je changer de fragrance ?
-+
-Dans le plan Annuel Signature, vous pouvez changer de fragrance chaque mois depuis l'application mobile. Dans le plan Trimestriel, vous sélectionnez vos 3 cartouches en début de période. Des cartouches supplémentaires sont disponibles à l'unité dans notre boutique.
-Que se passe-t-il si je résilie mon abonnement ?
-+
-En cas de résiliation, la machine doit être retournée (kit de retour prépayé fourni) ou rachetée au tarif dégressif selon l'ancienneté de votre abonnement. Après 24 mois d'abonnement continu, la machine devient votre propriété définitive.
-Pourquoi ne puis-je pas utiliser d'autres huiles essentielles ?
-+
-La membrane de nébulisation du NEBULA est calibrée avec une précision de quelques microns pour nos formulations spécifiques. Des huiles lourdes, de l'eau ou des diluants colmatent et dégradent irrémédiablement cette membrane. Nos capteurs détectent toute substance non conforme pour protéger la machine — et donc votre investissement.
-Le NEBULA fonctionne-t-il pour les grands espaces ?
-+
-Le NEBULA Pro couvre jusqu'à 150 m² en diffusion continue. Pour les espaces supérieurs à 150 m² (hall d'hôtel, grande salle de réunion), notre offre B2B Palace prévoit plusieurs unités avec une gestion centralisée depuis une seule interface. Contactez-nous pour un audit olfactif de votre espace.
-Y a-t-il un engagement minimum ?
-+
-L'abonnement Trimestriel est sans reconduction automatique — vous choisissez de renouveler ou non. L'abonnement Annuel est reconduit tacitement avec préavis de 30 jours. Aucun frais de résiliation dans les deux cas.
-COMMENCER MAINTENANT
-Votre espace mérite une signature.
-Premier abonnement. Machine offerte. Livraison en 48h. Votre identité olfactive commence aujourd'hui.
-CHOISIR MON ABONNEMENT
-DEMANDER UN AUDIT OLFACTIF B2B
-NEB·ULA
-L'identité olfactive, enfin à votre hauteur.
-© 2024 NEBULA PARFUMERIE D'AMBIANCE
-TOUS DROITS RÉSERVÉS
-contact@nebula-parfums.fr
-+33 (0)1 XX XX XX XX
-Paris · Grasse · Genève
+  .nav-cta {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--noir);
+    background: var(--or);
+    padding: 10px 24px;
+    border: none;
+    cursor: none;
+    transition: all 0.3s;
+  }
+  .nav-cta:hover { background: var(--or-2); }
+
+  /* ============ HERO ============ */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 160px 80px 100px 100px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--or);
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: var(--blanc);
+    opacity: 0;
+    animation: fadeUp 0.8s 0.35s forwards;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--or);
+    font-weight: 300;
+  }
+
+  .hero-sub {
+    margin-top: 32px;
+    font-size: 1.15rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--blanc-2);
+    max-width: 420px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.5s forwards;
+  }
+
+  .hero-cta-group {
+    margin-top: 52px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.65s forwards;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--noir);
+    background: var(--or);
+    padding: 18px 40px;
+    text-decoration: none;
+    border: none;
+    cursor: none;
+    transition: all 0.35s;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-primary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.15);
+    transform: translateX(-101%);
+    transition: transform 0.35s ease;
+  }
+  .btn-primary:hover::after { transform: translateX(0); }
+
+  .btn-ghost {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gris);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gris-2);
+    padding-bottom: 2px;
+    transition: color 0.3s, border-color 0.3s;
+    cursor: none;
+  }
+  .btn-ghost:hover { color: var(--blanc); border-color: var(--blanc); }
+
+  .hero-stats {
+    margin-top: 80px;
+    display: flex;
+    gap: 48px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.8s forwards;
+  }
+  .stat-item {}
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--or);
+    line-height: 1;
+  }
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gris);
+    margin-top: 6px;
+  }
+
+  /* Hero visual side */
+  .hero-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .diffuser-scene {
+    position: relative;
+    width: 380px;
+    height: 520px;
+  }
+
+  /* Abstract diffuser shape */
+  .diffuser-body {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 280px;
+    background: linear-gradient(160deg, #2a2a2e 0%, #1a1a1e 40%, #0e0e10 100%);
+    border-radius: 60px 60px 24px 24px;
+    box-shadow:
+      inset 1px 0 0 rgba(255,255,255,0.06),
+      inset -1px 0 0 rgba(0,0,0,0.4),
+      0 40px 80px rgba(0,0,0,0.8),
+      0 0 0 1px rgba(255,255,255,0.04);
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .diffuser-led {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 12px 4px rgba(255,255,255,0.5), 0 0 30px 10px rgba(201,169,110,0.15);
+    animation: ledPulse 3s ease-in-out infinite;
+  }
+
+  .diffuser-reflect {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 30px;
+    height: 80px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.06) 0%, transparent 100%);
+    border-radius: 15px;
+  }
+
+  /* Mist particles */
+  .mist-container {
+    position: absolute;
+    bottom: 340px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 280px;
+  }
+
+  .mist-particle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,169,110,0.08) 0%, transparent 70%);
+    animation: mistRise linear infinite;
+  }
+
+  .mist-particle:nth-child(1) { width: 60px; height: 60px; left: 70px; animation-duration: 4s; animation-delay: 0s; }
+  .mist-particle:nth-child(2) { width: 45px; height: 45px; left: 90px; animation-duration: 5s; animation-delay: 0.8s; }
+  .mist-particle:nth-child(3) { width: 70px; height: 70px; left: 60px; animation-duration: 4.5s; animation-delay: 1.5s; }
+  .mist-particle:nth-child(4) { width: 35px; height: 35px; left: 100px; animation-duration: 3.8s; animation-delay: 2.2s; }
+  .mist-particle:nth-child(5) { width: 55px; height: 55px; left: 75px; animation-duration: 5.2s; animation-delay: 0.4s; }
+  .mist-particle:nth-child(6) { width: 40px; height: 40px; left: 85px; animation-duration: 4.8s; animation-delay: 1.8s; }
+
+  /* Large ambient glow behind diffuser */
+  .hero-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 60%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: glowPulse 5s ease-in-out infinite;
+  }
+
+  /* Grid lines in background */
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image:
+      linear-gradient(var(--blanc) 1px, transparent 1px),
+      linear-gradient(90deg, var(--blanc) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Vertical line decoration */
+  .v-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent 0%, rgba(201,169,110,0.3) 30%, rgba(201,169,110,0.3) 70%, transparent 100%);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-12px); }
+  }
+  @keyframes ledPulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 12px 4px rgba(255,255,255,0.5), 0 0 30px 10px rgba(201,169,110,0.15); }
+    50% { opacity: 0.7; box-shadow: 0 0 6px 2px rgba(255,255,255,0.3), 0 0 15px 5px rgba(201,169,110,0.08); }
+  }
+  @keyframes mistRise {
+    0% { bottom: 0; opacity: 0; transform: scale(0.6) translateX(0); }
+    20% { opacity: 1; }
+    80% { opacity: 0.4; }
+    100% { bottom: 260px; opacity: 0; transform: scale(1.4) translateX(var(--drift, 10px)); }
+  }
+  @keyframes glowPulse {
+    0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.05); }
+  }
+
+  /* ============ SECTION BASE ============ */
+  section { padding: 140px 100px; }
+
+  .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--or);
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  h2 {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  h2 em { font-style: italic; color: var(--or); }
+
+  .section-intro {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--blanc-2);
+    max-width: 600px;
+    margin-top: 28px;
+  }
+
+  .hr-gold {
+    width: 60px;
+    height: 1px;
+    background: var(--or);
+    margin: 40px 0;
+  }
+
+  /* ============ PROBLEME ============ */
+  .problem {
+    background: var(--noir-2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .problem::before {
+    content: '"';
+    position: absolute;
+    top: -40px;
+    right: 80px;
+    font-size: 30rem;
+    color: rgba(201,169,110,0.03);
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1;
+  }
+
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: start;
+    margin-top: 80px;
+  }
+
+  .problem-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .problem-card {
+    padding: 32px;
+    border: 1px solid var(--gris-2);
+    position: relative;
+    transition: border-color 0.4s, background 0.4s;
+    cursor: none;
+  }
+  .problem-card:hover {
+    border-color: rgba(201,169,110,0.3);
+    background: rgba(201,169,110,0.03);
+  }
+
+  .problem-card-icon {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    opacity: 0.7;
+  }
+
+  .problem-card h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--blanc);
+  }
+
+  .problem-card p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--gris);
+  }
+
+  .problem-quote {
+    border-left: 1px solid var(--or);
+    padding-left: 40px;
+    position: sticky;
+    top: 140px;
+  }
+
+  .problem-quote blockquote {
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--blanc-2);
+  }
+
+  .problem-quote cite {
+    display: block;
+    margin-top: 28px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gris);
+    font-style: normal;
+  }
+
+  /* ============ SOLUTION ============ */
+  .solution {
+    background: var(--noir);
+    position: relative;
+  }
+
+  .solution-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    margin-top: 80px;
+    align-items: center;
+  }
+
+  .tech-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .tech-spec-item {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--gris-2);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+  .tech-spec-item:first-child { border-top: 1px solid var(--gris-2); }
+
+  .spec-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--or);
+    padding-top: 4px;
+    letter-spacing: 0.1em;
+  }
+
+  .spec-content h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: var(--blanc);
+  }
+
+  .spec-content p {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.65;
+    color: var(--gris);
+  }
+
+  /* Diffuser visual for solution section */
+  .solution-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .visual-card {
+    background: var(--noir-3);
+    border: 1px solid var(--gris-2);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .visual-card::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, var(--or), transparent);
+    opacity: 0.4;
+  }
+
+  .visual-card-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--or);
+    margin-bottom: 16px;
+  }
+
+  .visual-card h3 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 12px;
+  }
+
+  .visual-card p {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--gris);
+  }
+
+  /* ============ SENSORS / GARANTIE ============ */
+  .sensors {
+    background: linear-gradient(135deg, #0d0d10 0%, #12100e 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sensors::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(201,169,110,0.05) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .sensors-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    margin-top: 80px;
+    align-items: center;
+  }
+
+  .sensor-shield {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+  }
+
+  .shield-outer {
+    width: 280px;
+    height: 320px;
+    border: 1px solid rgba(201,169,110,0.25);
+    clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0% 80%, 0% 20%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: shieldPulse 4s ease-in-out infinite;
+  }
+
+  .shield-inner {
+    width: 200px;
+    height: 230px;
+    background: var(--or-pale);
+    clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0% 80%, 0% 20%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .shield-icon {
+    font-size: 2.5rem;
+    opacity: 0.9;
+  }
+
+  .shield-text {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--or);
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  @keyframes shieldPulse {
+    0%, 100% { border-color: rgba(201,169,110,0.25); box-shadow: 0 0 0 rgba(201,169,110,0); }
+    50% { border-color: rgba(201,169,110,0.5); box-shadow: 0 0 40px rgba(201,169,110,0.08); }
+  }
+
+  .sensors-text h2 { margin-bottom: 28px; }
+
+  .sensor-features {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 44px;
+  }
+
+  .sensor-feature {
+    display: grid;
+    grid-template-columns: 3px 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .sensor-feature-line {
+    width: 3px;
+    height: 100%;
+    background: var(--or);
+    opacity: 0.6;
+    min-height: 60px;
+  }
+
+  .sensor-feature h4 {
+    font-size: 1.05rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: var(--blanc);
+  }
+
+  .sensor-feature p {
+    font-size: 0.92rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--gris);
+  }
+
+  /* ============ TARIFS ============ */
+  .pricing {
+    background: var(--noir-2);
+    text-align: center;
+  }
+
+  .pricing > .label, .pricing > h2, .pricing > .section-intro {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 1fr;
+    gap: 24px;
+    margin-top: 80px;
+    align-items: start;
+  }
+
+  .plan-card {
+    background: var(--noir-3);
+    border: 1px solid var(--gris-2);
+    padding: 52px 40px;
+    text-align: left;
+    position: relative;
+    transition: border-color 0.4s, transform 0.4s;
+    cursor: none;
+  }
+  .plan-card:hover {
+    border-color: rgba(201,169,110,0.4);
+    transform: translateY(-4px);
+  }
+
+  .plan-card.featured {
+    border-color: var(--or);
+    background: linear-gradient(160deg, #1a1710 0%, #111108 100%);
+  }
+
+  .plan-badge {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--or);
+    color: var(--noir);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 6px 20px;
+  }
+
+  .plan-name {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--or);
+    margin-bottom: 20px;
+  }
+
+  .plan-price {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--blanc);
+  }
+  .plan-price sup {
+    font-size: 1.2rem;
+    vertical-align: super;
+  }
+  .plan-period {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gris);
+    margin-top: 8px;
+    margin-bottom: 32px;
+  }
+
+  .plan-machine {
+    background: var(--or-pale);
+    border: 1px solid rgba(201,169,110,0.2);
+    padding: 16px 20px;
+    margin-bottom: 32px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--or);
+  }
+
+  .plan-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+
+  .plan-features li {
+    display: flex;
+    align-items: start;
+    gap: 12px;
+    font-size: 0.92rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--blanc-2);
+  }
+  .plan-features li::before {
+    content: '—';
+    color: var(--or);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .plan-cta {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 16px;
+    text-decoration: none;
+    transition: all 0.3s;
+    cursor: none;
+    border: none;
+  }
+
+  .plan-cta.primary {
+    background: var(--or);
+    color: var(--noir);
+  }
+  .plan-cta.primary:hover { background: var(--or-2); }
+
+  .plan-cta.ghost {
+    border: 1px solid var(--gris-2);
+    color: var(--blanc);
+  }
+  .plan-cta.ghost:hover { border-color: var(--or); color: var(--or); }
+
+  /* ============ EXPERTISE ============ */
+  .expertise {
+    background: var(--noir);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+  }
+
+  .expertise-notes {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 40px;
+  }
+
+  .note-item {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--gris-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .note-item:first-child { border-top: 1px solid var(--gris-2); }
+
+  .note-type {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--or);
+  }
+
+  .note-desc {
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--gris);
+    text-align: right;
+  }
+
+  .expertise-right {
+    padding-left: 40px;
+    border-left: 1px solid var(--gris-2);
+  }
+
+  .signature-fragrances {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 44px;
+  }
+
+  .fragrance-item {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .fragrance-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--or);
+    opacity: 0.5;
+    line-height: 1;
+  }
+
+  .fragrance-info h4 {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--blanc);
+    margin-bottom: 4px;
+  }
+  .fragrance-info p {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--gris);
+    font-style: italic;
+  }
+
+  /* ============ FAQ ============ */
+  .faq {
+    background: var(--noir-2);
+  }
+
+  .faq-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+    margin-top: 80px;
+  }
+
+  .faq-intro {
+    position: sticky;
+    top: 140px;
+  }
+
+  .faq-intro h2 { font-size: 2.8rem; }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--gris-2);
+    overflow: hidden;
+  }
+  .faq-item:first-child { border-top: 1px solid var(--gris-2); }
+
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    color: var(--blanc);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 28px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: none;
+    transition: color 0.3s;
+  }
+  .faq-question:hover { color: var(--or); }
+
+  .faq-toggle {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.2rem;
+    color: var(--or);
+    transition: transform 0.3s;
+    flex-shrink: 0;
+    margin-left: 20px;
+  }
+  .faq-item.open .faq-toggle { transform: rotate(45deg); }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .faq-item.open .faq-answer { max-height: 300px; }
+
+  .faq-answer p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--gris);
+    padding-bottom: 28px;
+  }
+
+  /* ============ CTA FINAL ============ */
+  .cta-final {
+    background: var(--noir);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 180px 100px;
+  }
+
+  .cta-final::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(201,169,110,0.07) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .cta-final h2 {
+    font-size: clamp(3rem, 5vw, 6rem);
+    font-weight: 300;
+    position: relative;
+  }
+
+  .cta-final .section-intro {
+    margin: 28px auto 0;
+    text-align: center;
+  }
+
+  .cta-final-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 52px;
+    position: relative;
+  }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: var(--noir);
+    border-top: 1px solid var(--gris-2);
+    padding: 60px 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .footer-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 0.35em;
+    color: var(--blanc);
+  }
+  .footer-logo span { color: var(--or); }
+
+  .footer-tagline {
+    font-size: 0.9rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--gris);
+    margin-top: 8px;
+  }
+
+  .footer-center {
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gris);
+  }
+
+  .footer-right {
+    text-align: right;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    color: var(--gris);
+    line-height: 1.8;
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Responsive minimal */
+  @media (max-width: 900px) {
+    nav { padding: 24px 30px; }
+    .nav-links { display: none; }
+    section { padding: 80px 30px; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero-left { padding: 120px 30px 80px; }
+    .problem-grid, .solution-content, .sensors-layout, .expertise, .faq-layout { grid-template-columns: 1fr; gap: 60px; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    footer { grid-template-columns: 1fr; text-align: center; }
+    .footer-right { text-align: center; }
+    .expertise-right { padding-left: 0; border-left: none; border-top: 1px solid var(--gris-2); padding-top: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">NEB<span>·</span>ULA</div>
+  <ul class="nav-links">
+    <li><a href="#solution">Technologie</a></li>
+    <li><a href="#sensors">Garantie</a></li>
+    <li><a href="#pricing">Offres</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <button class="nav-cta">Obtenir mon diffuseur</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="padding:0;">
+  <div class="hero-left">
+    <span class="hero-eyebrow">Identité Olfactive · Technologie de Prestige</span>
+    <h1>L'Identité<br>d'un Palace.<br><em>Partout.</em></h1>
+    <p class="hero-sub">Votre diffuseur nébuliseur haute technologie <strong>offert</strong> avec votre abonnement aux fragrances de Grasse. Une seule décision. Une présence olfactive permanente.</p>
+    <div class="hero-cta-group">
+      <a href="#pricing" class="btn-primary">Recevoir mon diffuseur offert</a>
+      <a href="#solution" class="btn-ghost">Découvrir la technologie</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">0°</div>
+        <div class="stat-label">Nébulisation à froid</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Essences pures certifiées</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">∞</div>
+        <div class="stat-label">Garantie sous abonnement</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="diffuser-scene">
+      <div class="mist-container">
+        <div class="mist-particle" style="--drift:15px;"></div>
+        <div class="mist-particle" style="--drift:-8px;"></div>
+        <div class="mist-particle" style="--drift:20px;"></div>
+        <div class="mist-particle" style="--drift:-5px;"></div>
+        <div class="mist-particle" style="--drift:12px;"></div>
+        <div class="mist-particle" style="--drift:-15px;"></div>
+      </div>
+      <div class="diffuser-body">
+        <div class="diffuser-reflect"></div>
+      </div>
+      <div class="diffuser-led"></div>
+    </div>
+    <div class="v-line"></div>
+  </div>
+</section>
+
+<!-- PROBLEME -->
+<section class="problem" id="problem">
+  <span class="label reveal">Le Problème</span>
+  <h2 class="reveal">L'odeur qui vous<br><em>coûte des clients</em></h2>
+  <p class="section-intro reveal">On ne ferme pas un deal dans un bureau qui sent l'humidité. On ne soigne pas l'image d'une marque dans un hall d'entrée qui sent le désinfectant. L'olfactif est la dimension oubliée du prestige — la plus mémorisée.</p>
+  
+  <div class="problem-grid">
+    <div class="problem-cards reveal">
+      <div class="problem-card">
+        <div class="problem-card-icon">🏥</div>
+        <h3>Cabinet médical ou vétérinaire</h3>
+        <p>L'odeur antiseptique ou animale crée une anxiété immédiate. Elle signale un environnement subit, pas choisi. Vos clients le ressentent avant de voir quoi que ce soit.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-card-icon">🏢</div>
+        <h3>Hall d'entrée de bureau</h3>
+        <p>Un hall sans identité olfactive est un hall sans personnalité. Les Palaces et les grandes maisons de luxe l'ont compris depuis des décennies. Votre espace mérite le même traitement.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-card-icon">🚗</div>
+        <h3>Intérieur automobile de luxe</h3>
+        <p>Vous conduisez une Tesla, une BMW, une Porsche — et l'odeur vient d'un gadget à 5€. Ce n'est pas cohérent avec le reste de votre univers. Vous le savez.</p>
+      </div>
+    </div>
+    <div class="problem-quote reveal">
+      <blockquote>
+        "Les études neuromarketing confirment ce que l'instinct sait déjà : une odeur de qualité augmente la perception de valeur d'un espace de 27%. Une mauvaise odeur annule l'effet de n'importe quel investissement visuel."
+      </blockquote>
+      <cite>— Résultats d'études en marketing sensoriel, 2023</cite>
+      <div class="hr-gold"></div>
+      <p style="font-size:1rem;font-weight:300;line-height:1.75;color:var(--gris)">La question n'est pas si vous devez soigner votre identité olfactive. La question est de le faire avec la technologie et les matières qui sont à la hauteur de votre image.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="solution" id="solution">
+  <span class="label reveal">La Technologie</span>
+  <h2 class="reveal">Pas un humidificateur.<br><em>Une nébulisation moléculaire.</em></h2>
+  <p class="section-intro reveal">Le NEBULA est conçu selon le principe Apple : aucun bouton superflu, un seul matériau, une seule LED. L'élégance vient de ce qu'on n'a pas mis.</p>
+
+  <div class="solution-content">
+    <div class="tech-specs reveal">
+      <div class="tech-spec-item">
+        <span class="spec-num">01</span>
+        <div class="spec-content">
+          <h4>Nano-Nébulisation à Froid</h4>
+          <p>Contrairement aux diffuseurs à chaleur qui altèrent les molécules aromatiques, notre système fractionne les essences en particules de 1 à 5 microns sans aucune modification thermique. La fragrance que vous diffusez est identique à celle du flacon.</p>
+        </div>
+      </div>
+      <div class="tech-spec-item">
+        <span class="spec-num">02</span>
+        <div class="spec-content">
+          <h4>Aluminium anodisé. Design minimaliste.</h4>
+          <p>Un corps monolithique en aluminium anodisé noir mat. Aucun joint visible. Aucun bouton. Une seule LED blanche discrète indique l'état de fonctionnement. Silencieux en dessous de 28 décibels.</p>
+        </div>
+      </div>
+      <div class="tech-spec-item">
+        <span class="spec-num">03</span>
+        <div class="spec-content">
+          <h4>Couverture jusqu'à 150 m²</h4>
+          <p>Une cartouche couvre jusqu'à 150 m² en diffusion continue. Programmation par tranche horaire via l'application mobile. Compatible domotique Zigbee.</p>
+        </div>
+      </div>
+      <div class="tech-spec-item">
+        <span class="spec-num">04</span>
+        <div class="spec-content">
+          <h4>Cartouches propriétaires à chargement magnétique</h4>
+          <p>Connexion magnétique, remplacement en 3 secondes, zéro déversement. Le système cartouche est le cœur du dispositif de qualité certifiée.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="solution-visual reveal">
+      <div class="visual-card">
+        <div class="visual-card-label">Certification</div>
+        <h3>Essences de Grasse.</h3>
+        <p>Nos formules sont développées avec des maisons de composition parfumée indépendantes utilisant les matières premières naturelles de Grasse — capitale mondiale de la parfumerie. Notes de tête, de cœur, de fond : une architecture olfactive complète.</p>
+      </div>
+      <div class="visual-card">
+        <div class="visual-card-label">Expérience</div>
+        <h3>Issu de la parfumerie de luxe.</h3>
+        <p>Notre expertise est née de la production de compositions inspirées des grandes maisons. Nous connaissons les accords qui définissent le prestige — et nous les rendons accessibles sans compromis sur la qualité de la matière.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SENSORS / GARANTIE -->
+<section class="sensors" id="sensors">
+  <div class="sensors-layout">
+    <div class="sensor-shield reveal">
+      <div class="shield-outer">
+        <div class="shield-inner">
+          <div class="shield-icon">◈</div>
+          <div class="shield-text">Intelligence<br>Moléculaire<br>Certifiée</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sensors-text reveal">
+      <span class="label">Pureté Certifiée</span>
+      <h2>L'Intelligence<br>qui <em>protège</em> votre machine.</h2>
+      <p class="section-intro" style="margin-top:20px;">Votre NEBULA n'est pas seulement un diffuseur. Il est équipé d'un système de capteurs moléculaires intégrés — une technologie qui garantit la qualité de ce que vous respirez.</p>
+
+      <div class="sensor-features">
+        <div class="sensor-feature">
+          <div class="sensor-feature-line"></div>
+          <div>
+            <h4>Capteurs de détection moléculaire</h4>
+            <p>Les capteurs identifient la composition chimique de la substance introduite en moins de 3 secondes. Seules les essences NEBULA certifiées sont reconnues. Toute autre substance — eau, huile essentielle non certifiée, diluant — est immédiatement détectée.</p>
+          </div>
+        </div>
+        <div class="sensor-feature">
+          <div class="sensor-feature-line"></div>
+          <div>
+            <h4>Protection du système de nébulisation</h4>
+            <p>L'introduction d'une substance non certifiée endommage irrémédiablement la membrane de nébulisation ultra-fine, conçue exclusivement pour nos formulations. Nos capteurs protègent cet élément de précision — et donc votre investissement.</p>
+          </div>
+        </div>
+        <div class="sensor-feature">
+          <div class="sensor-feature-line"></div>
+          <div>
+            <h4>Garantie à Vie sous abonnement actif</h4>
+            <p>Tant que votre abonnement est actif et que les essences certifiées NEBULA sont utilisées, votre machine est garantie à vie. Remplacement sous 72h en cas de dysfonctionnement. Aucune question posée.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <span class="label reveal">Nos Offres</span>
+  <h2 class="reveal">Un abonnement.<br><em>Une machine offerte.</em></h2>
+  <p class="section-intro reveal">Le diffuseur NEBULA est inclus dès votre premier abonnement. Pas de frais cachés. Pas de délai. Livraison offerte en 48h.</p>
+
+  <div class="pricing-grid">
+    <!-- PLAN 1 -->
+    <div class="plan-card reveal">
+      <div class="plan-name">Trimestriel — Startup</div>
+      <div class="plan-price"><sup>€</sup>89</div>
+      <div class="plan-period">/ trimestre · soit 29,67€/mois</div>
+      <div class="plan-machine">✦ Machine NEBULA One offerte</div>
+      <ul class="plan-features">
+        <li>3 cartouches de fragrance prestige</li>
+        <li>Accès à 12 signatures olfactives</li>
+        <li>Application mobile incluse</li>
+        <li>Support prioritaire 5j/7</li>
+        <li>Garantie 2 ans constructeur</li>
+      </ul>
+      <a href="#" class="plan-cta ghost">Commencer →</a>
+    </div>
+
+    <!-- PLAN 2 FEATURED -->
+    <div class="plan-card featured reveal">
+      <div class="plan-badge">Le plus choisi</div>
+      <div class="plan-name">Annuel — Signature</div>
+      <div class="plan-price"><sup>€</sup>249</div>
+      <div class="plan-period">/ an · soit 20,75€/mois</div>
+      <div class="plan-machine">✦ Machine NEBULA Pro offerte (valeur 390€)</div>
+      <ul class="plan-features">
+        <li>12 cartouches prestige par an</li>
+        <li>Accès à l'intégralité du catalogue (24 signatures)</li>
+        <li>Changement de fragrance mensuel inclus</li>
+        <li>Application mobile premium</li>
+        <li>Hotline dédiée 7j/7</li>
+        <li>Garantie à Vie sous abonnement</li>
+        <li>Livraison express prioritaire</li>
+      </ul>
+      <a href="#" class="plan-cta primary">Recevoir mon NEBULA Pro →</a>
+    </div>
+
+    <!-- PLAN 3 -->
+    <div class="plan-card reveal">
+      <div class="plan-name">B2B — Palace</div>
+      <div class="plan-price"><sup>€</sup>490</div>
+      <div class="plan-period">/ an · multi-espaces</div>
+      <div class="plan-machine">✦ 3 machines NEBULA Pro offertes</div>
+      <ul class="plan-features">
+        <li>36 cartouches par an répartissables</li>
+        <li>Identité olfactive personnalisée sur mesure</li>
+        <li>Facturation entreprise mensuelle</li>
+        <li>Onboarding olfactif sur site inclus</li>
+        <li>Account Manager dédié</li>
+        <li>Garantie à Vie sur les 3 machines</li>
+      </ul>
+      <a href="#" class="plan-cta ghost">Contacter l'équipe →</a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="expertise" id="expertise">
+  <div class="reveal">
+    <span class="label">Notre ADN</span>
+    <h2>Née de la<br><em>parfumerie de luxe.</em></h2>
+    <p class="section-intro">Avant NEBULA, il y a des années d'immersion dans la chimie aromatique des grandes maisons. Une connaissance des accords qui définissent le prestige — acquise, pas copiée.</p>
+    <div class="hr-gold"></div>
+    <p style="font-size:1rem;font-weight:300;line-height:1.8;color:var(--gris);">Nos formulations s'inspirent des codes olfactifs des maisons les plus réputées — Dior, Chanel, Tom Ford — sans jamais reproduire leurs compositions. Nous créons des signatures propres, à partir des mêmes matières premières nobles. La différence ? Vous la sentez.</p>
+
+    <div class="expertise-notes">
+      <div class="note-item">
+        <span class="note-type">Notes de tête</span>
+        <span class="note-desc">Bergamote · Citron de Sicile · Gingembre</span>
+      </div>
+      <div class="note-item">
+        <span class="note-type">Notes de cœur</span>
+        <span class="note-desc">Rose de Mai · Jasmin Sambac · Iris</span>
+      </div>
+      <div class="note-item">
+        <span class="note-type">Notes de fond</span>
+        <span class="note-desc">Oud · Ambre gris · Bois de santal</span>
+      </div>
+      <div class="note-item">
+        <span class="note-type">Matières premières</span>
+        <span class="note-desc">Grasse · Calabre · Sri Lanka</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="expertise-right reveal">
+    <span class="label">Signatures emblématiques</span>
+    <p style="font-size:1rem;font-weight:300;line-height:1.7;color:var(--gris);margin-bottom:12px;">Nos créations olfactives les plus appréciées, disponibles en cartouches dans votre abonnement.</p>
+    <div class="signature-fragrances">
+      <div class="fragrance-item">
+        <div class="fragrance-num">I</div>
+        <div class="fragrance-info">
+          <h4>Forêt Sombre</h4>
+          <p>Bois d'Argent revisité · Oud, patchouli, encens</p>
+        </div>
+      </div>
+      <div class="fragrance-item">
+        <div class="fragrance-num">II</div>
+        <div class="fragrance-info">
+          <h4>Bureau 54</h4>
+          <p>Masculin absolu · Cuir, cèdre de l'Atlas, tabac blond</p>
+        </div>
+      </div>
+      <div class="fragrance-item">
+        <div class="fragrance-num">III</div>
+        <div class="fragrance-info">
+          <h4>Carte Blanche</h4>
+          <p>Épuré absolu · Coton blanc, musc pur, bois flotté</p>
+        </div>
+      </div>
+      <div class="fragrance-item">
+        <div class="fragrance-num">IV</div>
+        <div class="fragrance-info">
+          <h4>Palais Royal</h4>
+          <p>Signature palace · Rose, ambre, vanille de Madagascar</p>
+        </div>
+      </div>
+      <div class="fragrance-item">
+        <div class="fragrance-num">V</div>
+        <div class="fragrance-info">
+          <h4>Intérieur Cuir</h4>
+          <p>Automobile de luxe · Cuir neuf, bois de santal, vétiver</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-layout">
+    <div class="faq-intro reveal">
+      <span class="label">FAQ</span>
+      <h2>Vos<br><em>questions.</em></h2>
+      <div class="hr-gold"></div>
+      <p style="font-size:0.95rem;font-weight:300;line-height:1.75;color:var(--gris);">Une question non listée ? Notre équipe répond en moins de 2 heures en semaine.</p>
+    </div>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          La machine est-elle vraiment offerte ?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Oui, sans condition cachée. Le NEBULA One (valeur 190€) est inclus dans l'abonnement Trimestriel, le NEBULA Pro (valeur 390€) dans l'abonnement Annuel Signature. La machine reste la propriété de NEBULA tant que l'abonnement est actif — ce qui nous engage à vous offrir un service irréprochable à tout moment.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Puis-je changer de fragrance ?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Dans le plan Annuel Signature, vous pouvez changer de fragrance chaque mois depuis l'application mobile. Dans le plan Trimestriel, vous sélectionnez vos 3 cartouches en début de période. Des cartouches supplémentaires sont disponibles à l'unité dans notre boutique.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Que se passe-t-il si je résilie mon abonnement ?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>En cas de résiliation, la machine doit être retournée (kit de retour prépayé fourni) ou rachetée au tarif dégressif selon l'ancienneté de votre abonnement. Après 24 mois d'abonnement continu, la machine devient votre propriété définitive.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Pourquoi ne puis-je pas utiliser d'autres huiles essentielles ?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>La membrane de nébulisation du NEBULA est calibrée avec une précision de quelques microns pour nos formulations spécifiques. Des huiles lourdes, de l'eau ou des diluants colmatent et dégradent irrémédiablement cette membrane. Nos capteurs détectent toute substance non conforme pour protéger la machine — et donc votre investissement.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Le NEBULA fonctionne-t-il pour les grands espaces ?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Le NEBULA Pro couvre jusqu'à 150 m² en diffusion continue. Pour les espaces supérieurs à 150 m² (hall d'hôtel, grande salle de réunion), notre offre B2B Palace prévoit plusieurs unités avec une gestion centralisée depuis une seule interface. Contactez-nous pour un audit olfactif de votre espace.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Y a-t-il un engagement minimum ?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>L'abonnement Trimestriel est sans reconduction automatique — vous choisissez de renouveler ou non. L'abonnement Annuel est reconduit tacitement avec préavis de 30 jours. Aucun frais de résiliation dans les deux cas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <span class="label reveal">Commencer maintenant</span>
+  <h2 class="reveal">Votre espace mérite<br><em>une signature.</em></h2>
+  <p class="section-intro reveal">Premier abonnement. Machine offerte. Livraison en 48h. Votre identité olfactive commence aujourd'hui.</p>
+  <div class="cta-final-buttons reveal">
+    <a href="#pricing" class="btn-primary" style="font-size:0.7rem;padding:20px 52px;">Choisir mon abonnement</a>
+    <a href="#" class="btn-ghost">Demander un audit olfactif B2B</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">NEB<span>·</span>ULA</div>
+    <div class="footer-tagline">L'identité olfactive, enfin à votre hauteur.</div>
+  </div>
+  <div class="footer-center">
+    © 2024 NEBULA Parfumerie d'Ambiance<br>
+    Tous droits réservés
+  </div>
+  <div class="footer-right">
+    contact@nebula-parfums.fr<br>
+    +33 (0)1 XX XX XX XX<br>
+    Paris · Grasse · Genève
+  </div>
+</footer>
+
+<script>
+  // Custom cursor
+  const cursor = document.getElementById('cursor');
+  const cursorRing = document.getElementById('cursorRing');
+
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+    setTimeout(() => {
+      cursorRing.style.left = e.clientX + 'px';
+      cursorRing.style.top = e.clientY + 'px';
+    }, 80);
+  });
+
+  document.querySelectorAll('a, button, .plan-card, .problem-card').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursorRing.style.transform = 'translate(-50%, -50%) scale(1.8)';
+      cursorRing.style.borderColor = 'rgba(201,169,110,0.8)';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursorRing.style.transform = 'translate(-50%, -50%) scale(1)';
+      cursorRing.style.borderColor = 'rgba(201,169,110,0.4)';
+    });
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+  reveals.forEach(el => observer.observe(el));
+
+  // FAQ
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
+</body>
+</html>
