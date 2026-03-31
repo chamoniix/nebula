@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NEBULA — L'Identité Olfactive de Prestige</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<title>AMBIANCE SUBLIMÉE — L'Identité Olfactive de Prestige</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Tenor+Sans&family=EB+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --noir: #0a0a0b;
@@ -26,7 +26,7 @@
   body {
     background: var(--noir);
     color: var(--blanc);
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'EB Garamond', 'Playfair Display', serif;
     overflow-x: hidden;
     cursor: none;
   }
@@ -70,13 +70,28 @@
   }
 
   .logo {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 1.1rem;
-    letter-spacing: 0.35em;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    gap: 2px;
+  }
+  .logo-top {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.6rem;
+    letter-spacing: 0.5em;
+    text-transform: lowercase;
+    color: var(--or);
+  }
+  .logo-bottom {
+    font-family: 'Tenor Sans', serif;
+    font-weight: 400;
+    font-size: 0.95rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
     color: var(--blanc);
   }
-  .logo span { color: var(--or); }
 
   .nav-links {
     display: flex;
@@ -84,7 +99,7 @@
     list-style: none;
   }
   .nav-links a {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.7rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
@@ -95,9 +110,10 @@
   .nav-links a:hover { color: var(--or); }
 
   .nav-cta {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.58rem;
+    font-weight: 300;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--noir);
     background: var(--or);
@@ -127,9 +143,10 @@
   }
 
   .hero-eyebrow {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.58rem;
+    font-weight: 200;
+    letter-spacing: 0.5em;
     text-transform: uppercase;
     color: var(--or);
     margin-bottom: 32px;
@@ -174,9 +191,10 @@
 
   .btn-primary {
     display: inline-block;
-    font-family: 'DM Mono', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.2em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 300;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--noir);
     background: var(--or);
@@ -199,7 +217,7 @@
   .btn-primary:hover::after { transform: translateX(0); }
 
   .btn-ghost {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.65rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -221,16 +239,18 @@
   }
   .stat-item {}
   .stat-num {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
-    font-weight: 300;
+    font-weight: 400;
+    font-style: italic;
     color: var(--or);
     line-height: 1;
   }
   .stat-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.15em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 200;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--gris);
     margin-top: 6px;
@@ -377,9 +397,10 @@
   section { padding: 140px 100px; }
 
   .label {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.62rem;
-    letter-spacing: 0.3em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.58rem;
+    font-weight: 200;
+    letter-spacing: 0.5em;
     text-transform: uppercase;
     color: var(--or);
     margin-bottom: 24px;
@@ -424,7 +445,7 @@
     right: 80px;
     font-size: 30rem;
     color: rgba(201,169,110,0.03);
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'EB Garamond', 'Playfair Display', serif;
     line-height: 1;
   }
 
@@ -492,7 +513,7 @@
   .problem-quote cite {
     display: block;
     margin-top: 28px;
-    font-family: 'DM Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.62rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -531,7 +552,7 @@
   .tech-spec-item:first-child { border-top: 1px solid var(--gris-2); }
 
   .spec-num {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.6rem;
     color: var(--or);
     padding-top: 4px;
@@ -578,9 +599,10 @@
   }
 
   .visual-card-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.58rem;
-    letter-spacing: 0.25em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.52rem;
+    font-weight: 200;
+    letter-spacing: 0.5em;
     text-transform: uppercase;
     color: var(--or);
     margin-bottom: 16px;
@@ -663,9 +685,10 @@
   }
 
   .shield-text {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.55rem;
-    letter-spacing: 0.2em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.5rem;
+    font-weight: 200;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--or);
     text-align: center;
@@ -760,7 +783,7 @@
     transform: translateX(-50%);
     background: var(--or);
     color: var(--noir);
-    font-family: 'DM Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.55rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -768,17 +791,20 @@
   }
 
   .plan-name {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.25em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 200;
+    letter-spacing: 0.4em;
     text-transform: uppercase;
     color: var(--or);
     margin-bottom: 20px;
   }
 
   .plan-price {
+    font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
-    font-weight: 300;
+    font-weight: 400;
+    font-style: italic;
     line-height: 1;
     color: var(--blanc);
   }
@@ -787,9 +813,10 @@
     vertical-align: super;
   }
   .plan-period {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.15em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 200;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--gris);
     margin-top: 8px;
@@ -834,7 +861,7 @@
     width: 100%;
     display: block;
     text-align: center;
-    font-family: 'DM Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.65rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -883,9 +910,10 @@
   .note-item:first-child { border-top: 1px solid var(--gris-2); }
 
   .note-type {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.2em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 200;
+    letter-spacing: 0.4em;
     text-transform: uppercase;
     color: var(--or);
   }
@@ -918,9 +946,10 @@
   }
 
   .fragrance-num {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 400;
+    font-style: italic;
     color: var(--or);
     opacity: 0.5;
     line-height: 1;
@@ -976,8 +1005,8 @@
     border: none;
     text-align: left;
     color: var(--blanc);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
     font-weight: 400;
     padding: 28px 0;
     display: flex;
@@ -989,7 +1018,7 @@
   .faq-question:hover { color: var(--or); }
 
   .faq-toggle {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
     color: var(--or);
     transition: transform 0.3s;
@@ -1065,7 +1094,7 @@
   }
 
   .footer-logo {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Tenor Sans', 'Playfair Display', serif;
     font-weight: 800;
     font-size: 1.1rem;
     letter-spacing: 0.35em;
@@ -1083,18 +1112,20 @@
 
   .footer-center {
     text-align: center;
-    font-family: 'DM Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.15em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 200;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--gris);
   }
 
   .footer-right {
     text-align: right;
-    font-family: 'DM Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.1em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 200;
+    letter-spacing: 0.15em;
     color: var(--gris);
     line-height: 1.8;
   }
@@ -1133,7 +1164,10 @@
 
 <!-- NAV -->
 <nav>
-  <div class="logo">NEB<span>·</span>ULA</div>
+  <div class="logo">
+    <span class="logo-top">Parfumerie d'ambiance</span>
+    <span class="logo-bottom">Ambiance Sublimée</span>
+  </div>
   <ul class="nav-links">
     <li><a href="#solution">Technologie</a></li>
     <li><a href="#sensors">Garantie</a></li>
@@ -1228,7 +1262,7 @@
 <section class="solution" id="solution">
   <span class="label reveal">La Technologie</span>
   <h2 class="reveal">Pas un humidificateur.<br><em>Une nébulisation moléculaire.</em></h2>
-  <p class="section-intro reveal">Le NEBULA est conçu selon le principe Apple : aucun bouton superflu, un seul matériau, une seule LED. L'élégance vient de ce qu'on n'a pas mis.</p>
+  <p class="section-intro reveal">Notre diffuseur est conçu selon le principe Apple : aucun bouton superflu, un seul matériau, une seule LED. L'élégance vient de ce qu'on n'a pas mis.</p>
 
   <div class="solution-content">
     <div class="tech-specs reveal">
@@ -1292,14 +1326,14 @@
     <div class="sensors-text reveal">
       <span class="label">Pureté Certifiée</span>
       <h2>L'Intelligence<br>qui <em>protège</em> votre machine.</h2>
-      <p class="section-intro" style="margin-top:20px;">Votre NEBULA n'est pas seulement un diffuseur. Il est équipé d'un système de capteurs moléculaires intégrés — une technologie qui garantit la qualité de ce que vous respirez.</p>
+      <p class="section-intro" style="margin-top:20px;">Votre diffuseur n'est pas seulement un diffuseur. Il est équipé d'un système de capteurs moléculaires intégrés — une technologie qui garantit la qualité de ce que vous respirez.</p>
 
       <div class="sensor-features">
         <div class="sensor-feature">
           <div class="sensor-feature-line"></div>
           <div>
             <h4>Capteurs de détection moléculaire</h4>
-            <p>Les capteurs identifient la composition chimique de la substance introduite en moins de 3 secondes. Seules les essences NEBULA certifiées sont reconnues. Toute autre substance — eau, huile essentielle non certifiée, diluant — est immédiatement détectée.</p>
+            <p>Les capteurs identifient la composition chimique de la substance introduite en moins de 3 secondes. Seules les essences AMBIANCE SUBLIMÉE certifiées sont reconnues. Toute autre substance — eau, huile essentielle non certifiée, diluant — est immédiatement détectée.</p>
           </div>
         </div>
         <div class="sensor-feature">
@@ -1313,7 +1347,7 @@
           <div class="sensor-feature-line"></div>
           <div>
             <h4>Garantie à Vie sous abonnement actif</h4>
-            <p>Tant que votre abonnement est actif et que les essences certifiées NEBULA sont utilisées, votre machine est garantie à vie. Remplacement sous 72h en cas de dysfonctionnement. Aucune question posée.</p>
+            <p>Tant que votre abonnement est actif et que les essences certifiées AMBIANCE SUBLIMÉE sont utilisées, votre machine est garantie à vie. Remplacement sous 72h en cas de dysfonctionnement. Aucune question posée.</p>
           </div>
         </div>
       </div>
@@ -1325,7 +1359,7 @@
 <section class="pricing" id="pricing">
   <span class="label reveal">Nos Offres</span>
   <h2 class="reveal">Un abonnement.<br><em>Une machine offerte.</em></h2>
-  <p class="section-intro reveal">Le diffuseur NEBULA est inclus dès votre premier abonnement. Pas de frais cachés. Pas de délai. Livraison offerte en 48h.</p>
+  <p class="section-intro reveal">Le diffuseur AMBIANCE SUBLIMÉE est inclus dès votre premier abonnement. Pas de frais cachés. Pas de délai. Livraison offerte en 48h.</p>
 
   <div class="pricing-grid">
     <!-- PLAN 1 -->
@@ -1333,7 +1367,7 @@
       <div class="plan-name">Trimestriel — Startup</div>
       <div class="plan-price"><sup>€</sup>89</div>
       <div class="plan-period">/ trimestre · soit 29,67€/mois</div>
-      <div class="plan-machine">✦ Machine NEBULA One offerte</div>
+      <div class="plan-machine">✦ Machine AMBIANCE SUBLIMÉE One offerte</div>
       <ul class="plan-features">
         <li>3 cartouches de fragrance prestige</li>
         <li>Accès à 12 signatures olfactives</li>
@@ -1350,7 +1384,7 @@
       <div class="plan-name">Annuel — Signature</div>
       <div class="plan-price"><sup>€</sup>249</div>
       <div class="plan-period">/ an · soit 20,75€/mois</div>
-      <div class="plan-machine">✦ Machine NEBULA Pro offerte (valeur 390€)</div>
+      <div class="plan-machine">✦ Machine AMBIANCE SUBLIMÉE Pro offerte (valeur 390€)</div>
       <ul class="plan-features">
         <li>12 cartouches prestige par an</li>
         <li>Accès à l'intégralité du catalogue (24 signatures)</li>
@@ -1360,7 +1394,7 @@
         <li>Garantie à Vie sous abonnement</li>
         <li>Livraison express prioritaire</li>
       </ul>
-      <a href="#" class="plan-cta primary">Recevoir mon NEBULA Pro →</a>
+      <a href="#" class="plan-cta primary">Recevoir mon AMBIANCE SUBLIMÉE Pro →</a>
     </div>
 
     <!-- PLAN 3 -->
@@ -1368,7 +1402,7 @@
       <div class="plan-name">B2B — Palace</div>
       <div class="plan-price"><sup>€</sup>490</div>
       <div class="plan-period">/ an · multi-espaces</div>
-      <div class="plan-machine">✦ 3 machines NEBULA Pro offertes</div>
+      <div class="plan-machine">✦ 3 machines AMBIANCE SUBLIMÉE Pro offertes</div>
       <ul class="plan-features">
         <li>36 cartouches par an répartissables</li>
         <li>Identité olfactive personnalisée sur mesure</li>
@@ -1387,7 +1421,7 @@
   <div class="reveal">
     <span class="label">Notre ADN</span>
     <h2>Née de la<br><em>parfumerie de luxe.</em></h2>
-    <p class="section-intro">Avant NEBULA, il y a des années d'immersion dans la chimie aromatique des grandes maisons. Une connaissance des accords qui définissent le prestige — acquise, pas copiée.</p>
+    <p class="section-intro">Avant AMBIANCE SUBLIMÉE, il y a des années d'immersion dans la chimie aromatique des grandes maisons. Une connaissance des accords qui définissent le prestige — acquise, pas copiée.</p>
     <div class="hr-gold"></div>
     <p style="font-size:1rem;font-weight:300;line-height:1.8;color:var(--gris);">Nos formulations s'inspirent des codes olfactifs des maisons les plus réputées — Dior, Chanel, Tom Ford — sans jamais reproduire leurs compositions. Nous créons des signatures propres, à partir des mêmes matières premières nobles. La différence ? Vous la sentez.</p>
 
@@ -1471,7 +1505,7 @@
           <span class="faq-toggle">+</span>
         </button>
         <div class="faq-answer">
-          <p>Oui, sans condition cachée. Le NEBULA One (valeur 190€) est inclus dans l'abonnement Trimestriel, le NEBULA Pro (valeur 390€) dans l'abonnement Annuel Signature. La machine reste la propriété de NEBULA tant que l'abonnement est actif — ce qui nous engage à vous offrir un service irréprochable à tout moment.</p>
+          <p>Oui, sans condition cachée. Le AMBIANCE SUBLIMÉE One (valeur 190€) est inclus dans l'abonnement Trimestriel, le AMBIANCE SUBLIMÉE Pro (valeur 390€) dans l'abonnement Annuel Signature. La machine reste la propriété d'AMBIANCE SUBLIMÉE tant que l'abonnement est actif — ce qui nous engage à vous offrir un service irréprochable à tout moment.</p>
         </div>
       </div>
       <div class="faq-item">
@@ -1498,7 +1532,7 @@
           <span class="faq-toggle">+</span>
         </button>
         <div class="faq-answer">
-          <p>La membrane de nébulisation du NEBULA est calibrée avec une précision de quelques microns pour nos formulations spécifiques. Des huiles lourdes, de l'eau ou des diluants colmatent et dégradent irrémédiablement cette membrane. Nos capteurs détectent toute substance non conforme pour protéger la machine — et donc votre investissement.</p>
+          <p>La membrane de nébulisation de notre diffuseur est calibrée avec une précision de quelques microns pour nos formulations spécifiques. Des huiles lourdes, de l'eau ou des diluants colmatent et dégradent irrémédiablement cette membrane. Nos capteurs détectent toute substance non conforme pour protéger la machine — et donc votre investissement.</p>
         </div>
       </div>
       <div class="faq-item">
@@ -1507,7 +1541,7 @@
           <span class="faq-toggle">+</span>
         </button>
         <div class="faq-answer">
-          <p>Le NEBULA Pro couvre jusqu'à 150 m² en diffusion continue. Pour les espaces supérieurs à 150 m² (hall d'hôtel, grande salle de réunion), notre offre B2B Palace prévoit plusieurs unités avec une gestion centralisée depuis une seule interface. Contactez-nous pour un audit olfactif de votre espace.</p>
+          <p>Le AMBIANCE SUBLIMÉE Pro couvre jusqu'à 150 m² en diffusion continue. Pour les espaces supérieurs à 150 m² (hall d'hôtel, grande salle de réunion), notre offre B2B Palace prévoit plusieurs unités avec une gestion centralisée depuis une seule interface. Contactez-nous pour un audit olfactif de votre espace.</p>
         </div>
       </div>
       <div class="faq-item">
@@ -1537,21 +1571,24 @@
 <!-- FOOTER -->
 <footer>
   <div>
-    <div class="footer-logo">NEB<span>·</span>ULA</div>
+    <div class="footer-logo">
+      <span style="font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-size:0.65rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--or);display:block;">Parfumerie d'ambiance</span>
+      <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--blanc);">Ambiance Sublimée</span>
+    </div>
     <div class="footer-tagline">L'identité olfactive, enfin à votre hauteur.</div>
   </div>
   <div class="footer-center">
-    © 2024 NEBULA Parfumerie d'Ambiance<br>
+    © 2024 AMBIANCE SUBLIMÉE<br>
     Tous droits réservés
   </div>
   <div class="footer-right">
-    contact@nebula-parfums.fr<br>
+    <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="86e5e9e8f2e7e5f2c6e8e3e4f3eae7abf6e7f4e0f3ebf5a8e0f4">[email&#160;protected]</a><br>
     +33 (0)1 XX XX XX XX<br>
     Paris · Grasse · Genève
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Custom cursor
   const cursor = document.getElementById('cursor');
   const cursorRing = document.getElementById('cursorRing');
@@ -1590,11 +1627,4 @@
 
   // FAQ
   function toggleFaq(btn) {
-    const item = btn.closest('.faq-item');
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
-  }
-</script>
-</body>
-</html>
+    const item = bt
